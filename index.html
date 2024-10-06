@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li class="font-semibold"><a>Home</a></li>
+                        <li class="font-semibold"><a>Shop</a></li>
+                        <li class="font-semibold"><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl"><img src="images/logo.webp" alt=""><span>Peddy</span></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-5">
+                    <li class="font-semibold"><a>Home</a></li>
+                    <li class="font-semibold"><a>Shop</a></li>
+                    <li class="font-semibold"><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a href="#"><img class="w-10" src="images/icon 1.png" alt=""></a>
+            </div>
+        </div>
+
+        <!-- hero section -->
+        <div class="lg:w-[40%] md:w-[70%] w-[80%] mx-auto text-center mt-10">
+            <h1 class="text-sm mb-4">Bringing Families Together ❤️‍🔥</h1>
+            <h1 class="text-5xl font-bold mb-4">Your Path to Adoption Starts Here</h1>
+            <p class="text-gray-600 mb-6">It is a long established fact that a reader will be distracted by the
+                readable
+                content of a page when looking at its layout.</p>
+            <button class="bg-[#0E7A81] text-white px-6 py-3 rounded-md mb-10">Get Started</button>
+        </div>
+        <!-- pet img -->
+         <!-- Image of Dog and Cat -->
+         <div class="flex justify-center md:w-[70%] mx-auto">
+            <img src="images/pet.webp" alt="Dog and Cat">
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main id="main-section" class="bg-white py-10">
+        <div class="container mx-auto text-center">
+
+            <!-- animal category -->
+            <div class="w-full">
+                <!-- Adopt Your Best Friend Section -->
+                <h2 class="text-3xl font-bold mb-6">Adopt Your Best Friend</h2>
+                <p class="mb-10 w-[50%] md:w-[60%] mx-auto">It is a long established fact that a reader will be
+                    distracted by the
+                    readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                    a.</p>
+
+                <!-- Animal Categories buttons-->
+                <div class="grid md:grid-cols-4 grid-cols-2 gap-5 w-10/12 mx-auto mb-10">
+                    <button
+                        class="text-2xl font-semibold py-3 px-8 rounded-md border border-gray-300 bg-[#0E7A81] bg-opacity-5 hover:rounded-full hover:bg-[#0E7A81] hover:bg-opacity-10 hover:border-[#0E7A81] duration-100">Dogs</button>
+                    <button
+                        class="text-2xl font-semibold py-3 px-8 rounded-md border border-gray-300 bg-[#0E7A81] bg-opacity-5 hover:rounded-full hover:bg-[#0E7A81] hover:bg-opacity-10 hover:border-[#0E7A81] duration-100">Cats</button>
+                    <button
+                        class="text-2xl font-semibold py-3 px-8 rounded-md border border-gray-300 bg-[#0E7A81] bg-opacity-5 hover:rounded-full hover:bg-[#0E7A81] hover:bg-opacity-10 hover:border-[#0E7A81] duration-100">Rabbits</button>
+                    <button
+                        class="text-2xl font-semibold py-3 px-8 rounded-md border border-gray-300 bg-[#0E7A8115] bg-opacity-5 hover:rounded-full hover:bg-[#0E7A81] hover:bg-opacity-10 hover:border-[#0E7A81] duration-100">Birds</button>
+                </div>
+            </div>
+
+            <!-- Featured and Grid Layout for Animals -->
+            <div class="flex flex-col justify-between md:flex-row lg:w-11/12 w-8/12 mx-auto mb-8 gap-4">
+                <p class="font-bold text-xl">Best Deal For you</p>
+                <button class="font-semibold text-white py-3 px-8 rounded-md bg-[#0E7A81] btn">Sort</button>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 px-6">
+                <!-- Right side: Featured Large Animal Image -->
+                <div class="lg:col-span-1 order-last rounded-lg border border-gray-200">
+                    <div class="grid md:grid-cols-2 grid-cols-1 p-2 gap-3">
+                        <img src="images/pet.webp" alt="Featured Animal" class="w-full">
+                        <img src="images/pet.webp" alt="Featured Animal" class="w-full">
+                    </div>
+                </div>
+
+                <!-- Left side: Smaller Animal Grid -->
+                <div class="lg:col-span-3">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
+
+                        <div class="card bg-base-100 w-[300px] h-[380px] rounded-lg border border-gray-200">
+                            <figure class="p-3">
+                                <img class="rounded-lg"
+                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                    alt="Shoes" />
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title -mt-8 font-bold text-lg">title</h2>
+                                <div class="text-left">
+                                    <p><span>icon</span>Breed: ${}</p>
+                                    <p><span>icon</span>Birth: ${}</p>
+                                    <p><span>icon</span>Gender: ${}</p>
+                                    <p><span>icon</span>price: ${}</p>
+                                </div>
+                                <div class="border border-gray-200"></div>
+                                <div class="flex justify-between mt-2">
+                                    <button class="px-3 py-1 border border-gray-300 hover:bg-[#0E7A81] rounded-md"><img
+                                            src="images/thumbs-up.png" alt=""></button>
+                                    <button
+                                        class="text-lg font-semibold rounded-md px-3 py-1 border border-gray-300 text-[#0E7A81] hover:bg-[#0E7A81] hover:text-white hover:border-[#0E7A81] ">Adopt</button>
+                                    <button
+                                        class="text-lg font-semibold rounded-md px-3 py-1 border border-gray-300 text-[#0E7A81] hover:bg-[#0E7A81] hover:text-white">Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+
+    <footer class="footer bg-black text-gray-400 gap-8 p-10 md:grid-cols-1 lg:grid-cols-3 md:place-items-center">
+        <nav>
+            <a class="flex gap-2 text-white text-3xl mb-2"><img src="images/logo.webp" alt=""><span>Peddy</span></a>
+            <div class="mb-3">
+                <p>Location: av. Washington 165, NY CA 54003</p>
+                <p>Phone: +31 85 964 47 25</p>
+                <p>Email: info@yourdomain.com</p>
+                <p>Openings hours: 9.00 AM - 5.00 PM</p>
+            </div>
+            <!-- socials -->
+            <div class="w-32">
+                <img src="images/socials.png" alt="">
+            </div>
+        </nav>
+        <nav class="font-bold order-last">
+            <h6 class="text-lg text-white">Services</h6>
+            <a class="link link-hover">Home</a>
+            <a class="link link-hover">About Us</a>
+            <a class="link link-hover">Animals</a>
+            <a class="link link-hover">Foundation</a>
+            <a class="link link-hover">Contact</a>
+        </nav>
+        <nav class="md:mr-10 lg:mr-0">
+            <h6 class="font-bold text-lg text-white">Drop a massage</h6>
+            <input type="text" placeholder="Type here" class="input input-bordered" />
+            <button class="bg-[#0E7A81] w-full text-white py-2 rounded-md font-bold text-lg">Subscribe</button>
+        </nav>
+
+    </footer>
+
+    <!-- js -->
+    <script src="index.js"></script>
+</body>
+
+</html>
