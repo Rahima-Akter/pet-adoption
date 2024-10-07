@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <title>Pet Adoption</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body class="bg-gray-100">
@@ -30,7 +31,7 @@
                         <li class="font-semibold"><a>Contact</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl"><img src="images/logo.webp" alt=""><span>Peddy</span></a>
+                <a class="btn btn-ghost text-white text-xl"><img src="images/logo.webp" alt=""><span>Peddy</span></a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-5">
@@ -47,10 +48,8 @@
         <!-- hero section -->
         <div class="lg:w-[40%] md:w-[70%] w-[80%] mx-auto text-center mt-10">
             <h1 class="text-sm mb-4">Bringing Families Together ❤️‍🔥</h1>
-            <h1 class="text-5xl font-bold mb-4">Your Path to Adoption Starts Here</h1>
-            <p class="text-gray-600 mb-6">It is a long established fact that a reader will be distracted by the
-                readable
-                content of a page when looking at its layout.</p>
+            <h1 class="text-5xl text-black font-bold mb-4">Your Path to Adoption Starts Here</h1>
+            <p class="text-gray-600 mb-6">Pets are The Secret to a Happy Home and a Constant Supply of Hilarious Moments! with pets there is not a single boring day</p>
             <button class="bg-[#0E7A81] text-white px-6 py-3 rounded-md mb-10"><a href="#main-section">Get Started</a></button>
         </div>
         <!-- pet img -->
@@ -67,14 +66,12 @@
             <!-- animal category -->
             <div class="w-full">
                 <!-- Adopt Your Best Friend Section -->
-                <h2 class="text-3xl font-bold mb-6">Adopt Your Best Friend</h2>
-                <p class="mb-10 w-[50%] md:w-[60%] mx-auto">It is a long established fact that a reader will be
-                    distracted by the
-                    readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
-                    a.</p>
+                <h2 class="text-3xl text-black font-bold mb-4">Adopt Your Best Friend</h2>
+                <p class="mb-10 w-[50%] md:w-[35%] mx-auto">We are here to provide you, your best friend your buddy.So stop thinking and adopt your first pet from us.</p>
 
+                    
                 <!-- Animal Categories buttons-->
-                <div id="category-btn" class="grid md:grid-cols-4 grid-cols-2 gap-5 w-10/12 mx-auto mb-10">
+                <div id="category-btn" class="grid max-[320px]:grid-cols-1 grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 w-10/12 mx-auto mb-10">
                     
                 </div>
             </div>
@@ -82,58 +79,35 @@
             <!-- Featured and Grid Layout for Animals -->
             <div class="flex flex-col justify-between md:flex-row lg:w-11/12 w-8/12 mx-auto mb-8 gap-4">
                 <p class="font-bold text-xl">Best Deal For you</p>
-                <button class="font-semibold text-white py-3 px-8 rounded-md bg-[#0E7A81] btn">Sort</button>
+                <button class="font-semibold text-white py-3 px-8 rounded-md bg-[#0E7A81]">Sort</button>
             </div>
             <!-- animales card section -->
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 px-6">
+                
+
                 <!-- Right side: Featured Large Animal Image -->
                 <div class="lg:col-span-1 order-last rounded-lg border border-gray-200">
-                    <div class="grid md:grid-cols-2 grid-cols-1 p-2 gap-3">
-                        <img src="images/pet.webp" alt="Featured Animal" class="w-full">
-                        <img src="images/pet.webp" alt="Featured Animal" class="w-full">
+                    <div id="sideImgContainer" class="grid md:grid-cols-2 grid-cols-1 p-2 gap-3">
+                        <!-- images goes here -->
                     </div>
+                </div>
+
+                <!-- spinner -->
+                <div id="loader" class="hidden col-span-3">
+                    <span  class="loading loading-ring loading-lg"></span>
                 </div>
 
                 <!-- Left side: Smaller Animal Grid -->
                 <div id="animal-container" class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
-
-                    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
-
-                        <div class="card bg-base-100 w-[300px] h-[380px] rounded-lg border border-gray-200">
-                            <figure class="p-3">
-                                <img class="rounded-lg"
-                                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    alt="Shoes" />
-                            </figure>
-                            <div class="card-body">
-                                <h2 class="card-title -mt-8 font-bold text-lg">title</h2>
-                                <div class="text-left">
-                                    <p><span>icon</span>Breed: ${}</p>
-                                    <p><span>icon</span>Birth: ${}</p>
-                                    <p><span>icon</span>Gender: ${}</p>
-                                    <p><span>icon</span>price: ${}</p>
-                                </div>
-                                <div class="border border-gray-200"></div>
-                                <div class="flex justify-between mt-2">
-                                    <button class="px-3 py-1 border border-gray-300 hover:bg-[#0E7A81] rounded-md"><img
-                                            src="images/thumbs-up.png" alt=""></button>
-                                    <button
-                                        class="text-lg font-semibold rounded-md px-3 py-1 border border-gray-300 text-[#0E7A81] hover:bg-[#0E7A81] hover:text-white hover:border-[#0E7A81] ">Adopt</button>
-                                    <button
-                                        class="text-lg font-semibold rounded-md px-3 py-1 border border-gray-300 text-[#0E7A81] hover:bg-[#0E7A81] hover:text-white">Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> -->
-
+                    <!-- pets cards goes here -->
                 </div>
 
             </div>
-
+            
         </div>
-
+        
     </main>
+    <!-- <span id="loader"></span> -->
 
     <!-- Footer Section -->
 

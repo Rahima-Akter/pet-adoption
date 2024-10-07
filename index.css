@@ -1,0 +1,50 @@
+.style {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 8px 0;
+    width: 70%;
+    border-radius: 40px;
+    border: 1px solid rgb(167, 167, 167);
+    background-color: #f3f8f9;
+    position: relative;
+    color: black;
+}
+
+.style:hover {
+    background-color: #e6f1f2;
+    border: 1px solid #0E7A81;
+}
+
+.active {
+    position: absolute;
+    border-radius: 40px;
+    width: 100%;
+    padding: 10px 0;
+    background: #dfedee;
+    border: 2px solid #0E7A81;
+    top: -2px;
+    left: 2;
+}
+
+@media screen and (max-width:320px) {
+    .active {
+        top: 0;
+        left: 0;
+        height: 60px;
+        padding: 3px 0;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .style {
+        padding: 0 ;
+        width: 100%;
+    }
+}
+
+/* 'text-2xl font-semibold py-2 w-[70%] rounded-md
+ border border-gray-300 bg-[#0E7A81] bg-opacity-5 hover:rounded-full hover:bg-[#0E7A81] hover:bg-opacity-10 hover:border-[#0E7A81] duration-100 flex justify-center items-center gap-4' */
