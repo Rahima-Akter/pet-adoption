@@ -31,7 +31,8 @@
                         <li class="font-semibold"><a>Contact</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-white text-xl"><img src="images/logo.webp" alt=""><span>Peddy</span></a>
+                <a class="btn btn-ghost text-black font-bold text-xl"><img src="images/logo.webp"
+                        alt=""><span>Peddy</span></a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-5">
@@ -49,12 +50,14 @@
         <div class="lg:w-[40%] md:w-[70%] w-[80%] mx-auto text-center mt-10">
             <h1 class="text-sm mb-4">Bringing Families Together ❤️‍🔥</h1>
             <h1 class="text-5xl text-black font-bold mb-4">Your Path to Adoption Starts Here</h1>
-            <p class="text-gray-600 mb-6">Pets are The Secret to a Happy Home and a Constant Supply of Hilarious Moments! with pets there is not a single boring day</p>
-            <button class="bg-[#0E7A81] text-white px-6 py-3 rounded-md mb-10"><a href="#main-section">Get Started</a></button>
+            <p class="text-gray-600 mb-6">Pets are The Secret to a Happy Home and a Constant Supply of Hilarious
+                Moments! with pets there is not a single boring day</p>
+            <button class="bg-[#0E7A81] text-white font-bold px-6 py-3 rounded-md mb-10"><a href="#main-section">Get
+                    Started</a></button>
         </div>
         <!-- pet img -->
-         <!-- Image of Dog and Cat -->
-         <div class="flex justify-center md:w-[70%] mx-auto">
+        <!-- Image of Dog and Cat -->
+        <div class="flex justify-center md:w-[70%] mx-auto">
             <img src="images/pet.webp" alt="Dog and Cat">
         </div>
     </header>
@@ -67,12 +70,14 @@
             <div class="w-full">
                 <!-- Adopt Your Best Friend Section -->
                 <h2 class="text-3xl text-black font-bold mb-4">Adopt Your Best Friend</h2>
-                <p class="mb-10 w-[50%] md:w-[35%] mx-auto">We are here to provide you, your best friend your buddy.So stop thinking and adopt your first pet from us.</p>
+                <p class="mb-10 w-[50%] md:w-[35%] mx-auto">We are here to provide you, your best friend your buddy.So
+                    stop thinking and adopt your first pet from us.</p>
 
-                    
+
                 <!-- Animal Categories buttons-->
-                <div id="category-btn" class="grid max-[320px]:grid-cols-1 grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 w-10/12 mx-auto mb-10">
-                    
+                <div id="category-btn"
+                    class="grid max-[320px]:grid-cols-1 grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 w-10/12 mx-auto mb-10">
+
                 </div>
             </div>
 
@@ -83,32 +88,64 @@
             </div>
             <!-- animales card section -->
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 px-6">
-                
+
 
                 <!-- Right side: Featured Large Animal Image -->
                 <div class="lg:col-span-1 order-last rounded-lg border border-gray-200">
                     <div id="sideImgContainer" class="grid md:grid-cols-2 grid-cols-1 p-2 gap-3">
                         <!-- images goes here -->
+                         <p id="sideImgContainer-title" class="text-sm font-semibold text-center mt-2 col-span-2 text-[#0E7A81]">Add your favourite pets here</p>
                     </div>
                 </div>
 
                 <!-- spinner -->
                 <div id="loader" class="hidden col-span-3">
-                    <span  class="loading loading-ring loading-lg"></span>
+                    <span class="loading loading-ring loading-lg"></span>
                 </div>
 
                 <!-- Left side: Smaller Animal Grid -->
-                <div id="animal-container" class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
+                <div id="animal-container"
+                    class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
                     <!-- pets cards goes here -->
                 </div>
 
             </div>
-            
-        </div>
-        
-    </main>
-    <!-- <span id="loader"></span> -->
 
+        </div>
+
+    </main>
+    <!-- Modal for details-->
+    <div id="modal">
+        <dialog id="myModal" class="modal modal-middle">
+            <div class="modal-box">
+                <div id="modal-content">
+
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn rounded-md font-semibold text-white bg-[#0E7A81]">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </div>
+    <!-- Modal countdown-->
+    <div id="adoptModal">
+        <dialog id="adoptionModal" class="modal modal-middle">
+            <div class="modal-box text-center">
+                <div id="modal-content ">
+                    <div class="w-1/5 mx-auto">
+                        <img src="images/adoption.png" alt="">
+                    </div>
+                    <div>
+                        <p class="font-bold text-3xl mb-2">Congrets</p>
+                        <p class="font-semibold text-lg mb-4">Process for your pet adoption has started</p>
+                        <p id="countDown" class="font-bold text-xl mb-4"></p>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </div>
     <!-- Footer Section -->
 
     <footer class="footer bg-black text-gray-400 gap-8 p-10 md:grid-cols-1 lg:grid-cols-3 md:place-items-center">
