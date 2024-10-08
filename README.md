@@ -1,12 +1,12 @@
-🔴Project-Name: 
-    🟢pet-adoption website
+🔴Project-Name:                                                                                                                 🟢pet-adoption website
+    
 
 
-🔴Project-Description: 
-    🟢This a website for adopting pets.Where people can adopt pets online,without the hassel of going to the pet adopting centers physically.
+🔴Project-Description:                                                                                                          🟢This a website for adopting pets.Where people can adopt pets online,without the hassel of going to the pet        adopting centers physically.
+    
 
 
-🔴key-features of project:
+🔴key-features of project:                                                                                              
     🟢search pets by category
     🟢can see full details of any pets on clicking *details-button
     🟢like any pets & the image of the liked pet will be added autometically
@@ -21,5 +21,5 @@
     🟢DOM Manipulation: created and append elements dynamically to update the UI, like-(showPetCard)
 
 
-🔴Live Link:
-    🟢 
+🔴Live Link: https://get-pets.netlify.app/
+    
