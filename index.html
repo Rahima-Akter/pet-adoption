@@ -84,7 +84,7 @@
             <!-- Featured and Grid Layout for Animals -->
             <div class="flex flex-col justify-between md:flex-row lg:w-11/12 w-8/12 mx-auto mb-8 gap-4">
                 <p class="font-bold text-xl">Best Deal For you</p>
-                <button class="font-semibold text-white py-3 px-8 rounded-md bg-[#0E7A81]">Sort</button>
+                <button id="sort-btn" onclick="sorted(); spinner();" class="font-semibold text-white py-3 px-8 rounded-md bg-[#0E7A81]">Sort</button>
             </div>
             <!-- animales card section -->
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 px-6">
@@ -94,7 +94,7 @@
                 <div class="lg:col-span-1 order-last rounded-lg border border-gray-200">
                     <div id="sideImgContainer" class="grid md:grid-cols-2 grid-cols-1 p-2 gap-3">
                         <!-- images goes here -->
-                         <p id="sideImgContainer-title" class="text-sm font-semibold text-center mt-2 col-span-2 text-[#0E7A81]">Add your favourite pets here</p>
+                         <p id="sideImgContainer-title" class="text-sm font-semibold text-center mt-2 col-span-2 text-[#0E7A81]">Add your favourite pets here👍</p>
                     </div>
                 </div>
 
@@ -146,8 +146,8 @@
             </div>
         </dialog>
     </div>
-    <!-- Footer Section -->
 
+    <!-- Footer Section -->
     <footer class="footer bg-black text-gray-400 gap-8 p-10 md:grid-cols-1 lg:grid-cols-3 md:place-items-center">
         <nav>
             <a class="flex gap-2 text-white text-3xl mb-2"><img src="images/logo.webp" alt=""><span>Peddy</span></a>
@@ -158,7 +158,7 @@
                 <p>Openings hours: 9.00 AM - 5.00 PM</p>
             </div>
             <!-- socials -->
-            <div class="w-32">
+            <div class="w-32 cursor-pointer">
                 <img src="images/socials.png" alt="">
             </div>
         </nav>
@@ -180,6 +180,7 @@
 
     <!-- js -->
     <script src="index.js"></script>
+    <!-- <script src="test.js"></script> -->
 </body>
 
 </html>

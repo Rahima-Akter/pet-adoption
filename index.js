@@ -31,7 +31,6 @@ const spinner = () => {
     setTimeout(function () {
         document.getElementById('loader').classList.add('hidden')
         document.getElementById('animal-container').classList.remove('hidden');
-        // petCardFetch();
     }, 2000);
 };  // end
 
@@ -46,13 +45,14 @@ const btnStyles = (clickedBtn) => {
 };
 
 // pet card section api fetch
+const allPetsUrl = "https://openapi.programming-hero.com/api/peddy/pets"
+let pets = [];
 const petCardFetch = async () => {
-    const loader = document.getElementById('loader');
-    loader.style.display = "hidden";
     try {
-        const res = await fetch('https://openapi.programming-hero.com/api/peddy/pets')
+        const res = await fetch(allPetsUrl)
         const data = await res.json()
-        showPetCard(data.pets)
+        pets = data.pets || [];
+        showPetCard(pets);
     }
     catch (err) {
         console.log('err:', err)
@@ -108,6 +108,50 @@ const showPetCard = (pet) => {
         cardContainer.append(div);
     });
 };
+// sort button functionality
+const sortPrice = (items) => {
+    return items.sort((a, b) => b.price - a.price)
+};
+
+const sorted = () => {
+    const sortedItems = sortPrice([...pets]);
+    sortedCards(sortedItems);
+};
+const sortedCards = (sortedItems) => {
+    const cardContainer = document.getElementById('animal-container');
+    cardContainer.innerHTML = "";
+    sortedItems.forEach(item => {
+        const div = document.createElement('div');
+        cardContainer.classList.add('grid')
+        div.innerHTML = `
+                <div class="w-72 lg:w-[300px] border border-gray-200 rounded-md">
+                    <figure class="h-[150px] p-2">
+                        <img class="rounded-lg w-full h-full object-cover" src="${item.image}" alt="pet image"/>
+                    </figure>
+                    <div class="card-body -ml-5">
+                        <h2 class="card-title -mt-3 font-bold text-2xl text-black">${item.pet_name}</h2>
+                        <div class="text-left font-semibold">
+                            <p class="flex gap-2"><span><img src="images/breed.png"/></span>Breed: ${item.breed ? item.breed : 'N/A'}</p>
+                            <p class="flex gap-2"><span><img src="images/date.png"/></span>Birth: ${item.date_of_birth ? item.date_of_birth : 'N/A'}</p>
+                            <p class="flex gap-2"><span><img src="images/gender.png"/></span>Gender: ${item.gender ? item.gender : 'N/A'}</p>
+                            <p class="flex gap-2"><span><img src="images/price.png"/></span>price: ${item.price ? `${item.price}$` : 'N/A'}</p>
+                        </div>
+                        <div class="border border-gray-200"></div>
+                        <div class="flex justify-between mt-2">
+                            <button onclick="likedImage('${item.image}')" class="px-3 py-2 border border-gray-300 hover:bg-[#0E7A81] rounded-md"><img src="images/thumbs-up.png" alt="">
+                            </button>
+                            <button onclick="adoptionModal(this)" class="text-sm font-semibold rounded-md px-3 py-2 border border-gray-300 text-[#0E7A81] hover:bg-[#0E7A81] hover:text-white hover:border-[#0E7A81] btn-disable">Adopt
+                            </button>
+                            <button onclick="fetchModalDetails(${item.petId})" class="text-sm font-semibold rounded-md px-3 py-2 border border-gray-300 text-[#0E7A81] hover:bg-[#0E7A81] hover:text-white">Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        `
+        cardContainer.append(div);
+    })
+}; // end
+
 // details modal
 const fetchModalDetails = async (id) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
@@ -159,7 +203,7 @@ const adoptionModal = (btn) => {
             showModal.close();
             // disable the button after countDown
             btn.setAttribute('disabled', true);
-            btn.classList = 'hover:none btn btn-sm '
+            btn.classList = 'hover:none btn btn-sm'
         };
     }, 1000);
 };
@@ -169,7 +213,7 @@ const petCategory = async (name) => {
     try {
         const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${name}`)
         const data = await res.json()
-        showPetCard(data.data)
+        showPetCard(data.data);
     }
     catch (err) {
         console.log('error: ', err)
