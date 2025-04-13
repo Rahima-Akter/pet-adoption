@@ -1,185 +1,283 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pet Adoption Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/index.css">
-</head>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
 
-<body class="bg-gray-100">
-
+  <body class="bg-gray-100">
     <!-- Header Section -->
     <header class="bg-white shadow-md">
-        <div class="container mx-auto navbar bg-base-100">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li class="font-semibold"><a>Home</a></li>
-                        <li class="font-semibold"><a>Shop</a></li>
-                        <li class="font-semibold"><a>Contact</a></li>
-                    </ul>
-                </div>
-                <a class="btn btn-ghost text-black font-bold text-xl"><img src="images/logo.webp"
-                        alt=""><span>Peddy</span></a>
+      <div class="container mx-auto navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-5">
-                    <li class="font-semibold"><a>Home</a></li>
-                    <li class="font-semibold"><a>Shop</a></li>
-                    <li class="font-semibold"><a>Contact</a></li>
-                </ul>
-            </div>
-            <div class="navbar-end">
-                <a href="#"><img class="w-10" src="images/icon 1.png" alt=""></a>
-            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li class="font-semibold"><a>Home</a></li>
+              <li class="font-semibold"><a href="#animal-container">Shop</a></li>
+              <li class="font-semibold"><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-black font-bold text-xl"
+            ><img src="images/logo.webp" alt="" /><span>Peddy</span></a
+          >
         </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-5">
+            <li class="font-semibold"><a>Home</a></li>
+            <li class="font-semibold"><a href="#animal-container">Shop</a></li>
+            <li class="font-semibold"><a>Contact</a></li>
+            <li class="font-semibold drawer-content">
+              <label for="my-drawer-4" className="drawer-button btn btn-primary"
+                ><i class="fa-solid fa-cart-shopping mt-1.5"></i
+              ></label>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a href="/form.html"><img class="w-10" src="images/icon 1.png" alt="" /></a>
+        </div>
+      </div>
 
-        <!-- hero section -->
-        <div class="lg:w-[40%] md:w-[70%] w-[80%] mx-auto text-center mt-10">
-            <h1 class="text-sm mb-4">Bringing Families Together ❤️‍🔥</h1>
-            <h1 class="text-5xl text-black font-bold mb-4">Your Path to Adoption Starts Here</h1>
-            <p class="text-gray-600 mb-6">Pets are The Secret to a Happy Home and a Constant Supply of Hilarious
-                Moments! with pets there is not a single boring day</p>
-            <button class="bg-[#0E7A81] text-white font-bold px-6 py-3 rounded-md mb-10"><a href="#main-section">Get
-                    Started</a></button>
-        </div>
-        <!-- pet img -->
-        <!-- Image of Dog and Cat -->
-        <div class="flex justify-center md:w-[70%] mx-auto">
-            <img src="images/pet.webp" alt="Dog and Cat">
-        </div>
+      <!-- hero section -->
+      <div class="lg:w-[40%] md:w-[70%] w-[80%] mx-auto text-center mt-10">
+        <h1 class="text-sm mb-4">Bringing Families Together ❤️‍🔥</h1>
+        <h1 class="text-5xl text-black font-bold mb-4">
+          Your Path to Adoption Starts Here
+        </h1>
+        <p class="text-gray-600 mb-6">
+          Pets are The Secret to a Happy Home and a Constant Supply of Hilarious
+          Moments! with pets there is not a single boring day
+        </p>
+        <button
+          class="bg-[#0E7A81] text-white font-bold px-6 py-3 rounded-md mb-10"
+        >
+          <a href="#main-section">Get Started</a>
+        </button>
+      </div>
+      <!-- pet img -->
+      <!-- Image of Dog and Cat -->
+      <div class="flex justify-center md:w-[70%] mx-auto">
+        <img src="images/pet.webp" alt="Dog and Cat" />
+      </div>
     </header>
 
     <!-- Main Section -->
-    <main id="main-section" class="bg-white py-10">
-        <div class="container mx-auto text-center">
-
-            <!-- animal category -->
-            <div class="w-full">
-                <!-- Adopt Your Best Friend Section -->
-                <h2 class="text-3xl text-black font-bold mb-4">Adopt Your Best Friend</h2>
-                <p class="mb-10 w-[50%] md:w-[35%] mx-auto">We are here to provide you, your best friend your buddy.So
-                    stop thinking and adopt your first pet from us.</p>
-
-
-                <!-- Animal Categories buttons-->
-                <div id="category-btn"
-                    class="grid max-[320px]:grid-cols-1 grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 w-10/12 mx-auto mb-10">
-
-                </div>
-            </div>
-
-            <!-- Featured and Grid Layout for Animals -->
-            <div class="flex flex-col justify-between md:flex-row lg:w-11/12 w-8/12 mx-auto mb-8 gap-4">
-                <p class="font-bold text-xl">Best Deal For you</p>
-                <button id="sort-btn" onclick="sorted(); spinner();" class="font-semibold text-white py-3 px-8 rounded-md bg-[#0E7A81]">Sort</button>
-            </div>
-            <!-- animales card section -->
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 px-6">
-
-
-                <!-- Right side: Featured Large Animal Image -->
-                <div class="lg:col-span-1 order-last rounded-lg border border-gray-200">
-                    <div id="sideImgContainer" class="grid md:grid-cols-2 grid-cols-1 p-2 gap-3">
-                        <!-- images goes here -->
-                         <p id="sideImgContainer-title" class="text-sm font-semibold text-center mt-2 col-span-2 text-[#0E7A81]">Add your favourite pets here👍</p>
-                    </div>
-                </div>
-
-                <!-- spinner -->
-                <div id="loader" class="hidden col-span-3">
-                    <span class="loading loading-dots loading-lg"></span>
-                </div>
-
-                <!-- Left side: Smaller Animal Grid -->
-                <div id="animal-container"
-                    class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
-                    <!-- pets cards goes here -->
-                </div>
-
-            </div>
-
+    <main id="main-section" class="bg-white py-10 relative">
+      <div class="container mx-auto text-center">
+        <!-- animal category -->
+        <div class="w-full">
+          <!-- Adopt Your Best Friend Section -->
+          <h2 class="text-3xl text-black font-bold mb-4">
+            Adopt Your Best Friend
+          </h2>
+          <p class="mb-10 w-[50%] md:w-[35%] mx-auto">
+            We are here to provide you, your best friend your buddy.So stop
+            thinking and adopt your first pet from us.
+          </p>
+          <!-- Animal Categories buttons-->
+          <div
+            id="category-btn"
+            class="grid max-[320px]:grid-cols-1 grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 w-10/12 mx-auto mb-10"
+          ></div>
         </div>
 
+        <!-- Featured and Grid Layout for Animals -->
+        <div
+          class="flex flex-col justify-between md:flex-row lg:w-11/12 w-8/12 mx-auto mb-8 gap-4"
+        >
+          <p class="font-bold text-xl">Best Deal For you</p>
+          <button
+            id="sort-btn"
+            onclick="sorted(); spinner();"
+            class="font-semibold text-white py-3 px-8 rounded-md bg-[#0E7A81]"
+          >
+            Sort
+          </button>
+        </div>
+        <!-- animales card section -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 px-6">
+          <!-- Right side: Featured Large Animal Image -->
+          <div
+            class="lg:col-span-1 order-last rounded-lg border border-gray-200"
+          >
+            <div
+              id="sideImgContainer"
+              class="grid md:grid-cols-2 grid-cols-1 p-2 gap-3"
+            >
+              <!-- images goes here -->
+              <p
+                id="sideImgContainer-title"
+                class="text-sm font-semibold text-center mt-2 col-span-2 text-[#0E7A81]"
+              >
+                Add your favourite pets here👍
+              </p>
+            </div>
+          </div>
+
+          <!-- spinner -->
+          <div id="loader" class="hidden col-span-3">
+            <span class="loading loading-dots loading-lg"></span>
+          </div>
+
+          <!-- Left side: Smaller Animal Grid -->
+          <div
+            id="animal-container"
+            class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8"
+          >
+            <!-- pets cards goes here -->
+          </div>
+        </div>
+      </div>
     </main>
     <!-- Modal for details-->
     <div id="modal">
-        <dialog id="myModal" class="modal modal-middle">
-            <div class="modal-box">
-                <div id="modal-content">
-
-                </div>
-                <div class="modal-action">
-                    <form method="dialog">
-                        <button class="btn rounded-md font-semibold text-white bg-[#0E7A81]">Close</button>
-                    </form>
-                </div>
-            </div>
-        </dialog>
+      <dialog id="myModal" class="modal modal-middle">
+        <div class="modal-box">
+          <div id="modal-content"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <button
+                class="btn rounded-md font-semibold text-white bg-[#0E7A81]"
+              >
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
     <!-- Modal countdown-->
     <div id="adoptModal">
-        <dialog id="adoptionModal" class="modal modal-middle">
-            <div class="modal-box text-center">
-                <div id="modal-content ">
-                    <div class="w-1/5 mx-auto">
-                        <img src="images/adoption.png" alt="">
-                    </div>
-                    <div>
-                        <p class="font-bold text-3xl mb-2">Congrets</p>
-                        <p class="font-semibold text-lg mb-4">Process for your pet adoption has started</p>
-                        <p id="countDown" class="font-bold text-xl mb-4"></p>
-                    </div>
-                </div>
+      <dialog id="adoptionModal" class="modal modal-middle">
+        <div class="modal-box text-center">
+          <div id="modal-content ">
+            <div class="w-1/5 mx-auto">
+              <img src="images/adoption.png" alt="" />
             </div>
-        </dialog>
+            <div>
+              <p class="font-bold text-3xl mb-2">Congrets</p>
+              <p class="font-semibold text-lg mb-4">
+                Process for your pet adoption has started
+              </p>
+              <p id="countDown" class="font-bold text-xl mb-4"></p>
+            </div>
+          </div>
+        </div>
+      </dialog>
     </div>
 
     <!-- Footer Section -->
-    <footer class="footer bg-black text-gray-400 gap-8 p-10 md:grid-cols-1 lg:grid-cols-3 md:place-items-center">
-        <nav>
-            <a class="flex gap-2 text-white text-3xl mb-2"><img src="images/logo.webp" alt=""><span>Peddy</span></a>
-            <div class="mb-3">
-                <p>Location: av. Washington 165, NY CA 54003</p>
-                <p>Phone: +31 85 964 47 25</p>
-                <p>Email: info@yourdomain.com</p>
-                <p>Openings hours: 9.00 AM - 5.00 PM</p>
-            </div>
-            <!-- socials -->
-            <div class="w-32 cursor-pointer">
-                <img src="images/socials.png" alt="">
-            </div>
-        </nav>
-        <nav class="font-bold order-last">
-            <h6 class="text-lg text-white">Services</h6>
-            <a class="link link-hover">Home</a>
-            <a class="link link-hover">About Us</a>
-            <a class="link link-hover">Animals</a>
-            <a class="link link-hover">Foundation</a>
-            <a class="link link-hover">Contact</a>
-        </nav>
-        <nav class="md:mr-10 lg:mr-0">
-            <h6 class="font-bold text-lg text-white">Drop a massage</h6>
-            <input type="text" placeholder="Type here" class="input input-bordered" />
-            <button class="bg-[#0E7A81] w-full text-white py-2 rounded-md font-bold text-lg">Subscribe</button>
-        </nav>
-
+    <footer
+      class="footer bg-black text-gray-400 gap-8 p-10 md:grid-cols-1 lg:grid-cols-3 md:place-items-center"
+    >
+      <nav>
+        <a class="flex gap-2 text-white text-3xl mb-2"
+          ><img src="images/logo.webp" alt="" /><span>Peddy</span></a
+        >
+        <div class="mb-3">
+          <p>Location: av. Washington 165, NY CA 54003</p>
+          <p>Phone: +31 85 964 47 25</p>
+          <p>Email: info@yourdomain.com</p>
+          <p>Openings hours: 9.00 AM - 5.00 PM</p>
+        </div>
+        <!-- socials -->
+        <div class="w-32 cursor-pointer">
+          <img src="images/socials.png" alt="" />
+        </div>
+      </nav>
+      <nav class="font-bold order-last">
+        <h6 class="text-lg text-white">Services</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About Us</a>
+        <a class="link link-hover">Animals</a>
+        <a class="link link-hover">Foundation</a>
+        <a class="link link-hover">Contact</a>
+      </nav>
+      <nav class="md:mr-10 lg:mr-0">
+        <h6 class="font-bold text-lg text-white">Drop a massage</h6>
+        <input
+          type="text"
+          placeholder="Type here"
+          class="input input-bordered"
+        />
+        <button
+          class="bg-[#0E7A81] w-full text-white py-2 rounded-md font-bold text-lg"
+        >
+          Subscribe
+        </button>
+      </nav>
     </footer>
+
+    <!-- drawer -->
+    <div class="drawer drawer-end">
+      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-side">
+        <label
+          for="my-drawer-4"
+          aria-label="close sidebar"
+          class="drawer-overlay"
+        ></label>
+        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+          <div id="drawer-container" class="pr-3">
+            <p class="capitalize font-semibold text-center" id="no-pet">
+              No pet adopted yet
+            </p>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- toast -->
+    <div class="absolute top-3 left-[40%] z-50 hidden" id="toast">
+      <div
+        id="toast-inner"
+        class="relative border-teal-500 border-t-4 w-[250px] shadow-lg rounded-sm py-3 bg-white transition-transform duration-500 ease-in-out transform translate-x-[150%]"
+      >
+        <p class="font-bold text-sm text-center">Order Placed Successfully</p>
+        <button
+          onclick="closeToast()"
+          class="absolute -top-4 -right-2 text-lg cursor-pointer"
+        >
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+    </div>
 
     <!-- js -->
     <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>
