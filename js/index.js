@@ -67,11 +67,11 @@ const showPetCard = (pet) => {
     const div = document.createElement("div");
     cardContainer.classList.remove("grid");
     div.classList =
-      "bg-gray-200 flex flex-col justify-center items-center rounded-md gap-3 py-8";
+      "bg-gray-200 flex flex-col justify-center items-center rounded-md gap-3 py-8 px-12";
     div.innerHTML = `
-        <img src="images/error.webp"/>
+        <img class="-mr-10" src="images/error.webp"/>
         <h3 class="font-bold text-2xl">No Information Available</h3>
-        <p class="w-[60%]">Sorry no data found on this category! <br>Please try something else!</p>
+        <p class="">Sorry no data found on this category! <br>Please try something else!</p>
         `;
     cardContainer.append(div);
     return;
@@ -363,7 +363,7 @@ const completePurchase = () => {
   // empty the drawer after purchase
   const drawerContainer = document.getElementById("drawer-container");
   drawerContainer.innerHTML = "";
-  document.getElementById("no-pet").style.display = 'flex';
+  document.getElementById("no-pet").style.display = 'block';
 };
 
 const closeToast = () => {
